@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CompassionFinal.ASISTENCIA>
+
+
+@{
+    ViewBag.Title = "Buscar | Asistencia";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("SearchIndex", "Asistencias", FormMethod.Get))
+{
+    <p>
+
+        Fecha : @Html.TextBox("SearchString")
+        <input type="submit" class="btn btn-info" value="Buscar" />
+    </p>
+
+
+}
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.asistencia1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Niño.Nombres)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.asistencia1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Niño.Nombres)
+            </td>
+            <td>
+                <a class="btn btn-info" href="/Asistencias/Edit/@item.IDasistencia"> <i class="glyphicon glyphicon-wrench"></i></a>
+                || <a class="btn btn-info" href="/Asistencias/Delete/@item.IDasistencia"> <i class="glyphicon glyphicon-trash"></i></a>
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+

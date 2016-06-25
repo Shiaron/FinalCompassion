@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="Model.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASISTENCIA">
+      <EntityTypeMapping TypeName="Model.ASISTENCIA">
+        <MappingFragment StoreEntitySet="ASISTENCIA">
+          <ScalarProperty Name="IDasistencia" ColumnName="IDasistencia" />
+          <ScalarProperty Name="idniño" ColumnName="idniño" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="asistencia1" ColumnName="asistencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="Model.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="Model.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="Model.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="Model.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORIA_ENFERMEDAD">
+      <EntityTypeMapping TypeName="Model.CATEGORIA_ENFERMEDAD">
+        <MappingFragment StoreEntitySet="CATEGORIA_ENFERMEDAD">
+          <ScalarProperty Name="IDCategEnf" ColumnName="IDCategEnf" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_ENFERMEDAD">
+      <EntityTypeMapping TypeName="Model.DETALLE_ENFERMEDAD">
+        <MappingFragment StoreEntitySet="DETALLE_ENFERMEDAD">
+          <ScalarProperty Name="IDdetalleEnf" ColumnName="IDdetalleEnf" />
+          <ScalarProperty Name="idincidente" ColumnName="idincidente" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="subcategoria" ColumnName="subcategoria" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_HORARIO">
+      <EntityTypeMapping TypeName="Model.DETALLE_HORARIO">
+        <MappingFragment StoreEntitySet="DETALLE_HORARIO">
+          <ScalarProperty Name="IDDetHorario" ColumnName="IDDetHorario" />
+          <ScalarProperty Name="IDgrupo" ColumnName="IDgrupo" />
+          <ScalarProperty Name="dias" ColumnName="dias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_INMUNIZACIONES">
+      <EntityTypeMapping TypeName="Model.DETALLE_INMUNIZACIONES">
+        <MappingFragment StoreEntitySet="DETALLE_INMUNIZACIONES">
+          <ScalarProperty Name="IDInmunizacion" ColumnName="IDInmunizacion" />
+          <ScalarProperty Name="idniño" ColumnName="idniño" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="tipo_inmunizacion" ColumnName="tipo_inmunizacion" />
+          <ScalarProperty Name="dosis" ColumnName="dosis" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_LESION">
+      <EntityTypeMapping TypeName="Model.DETALLE_LESION">
+        <MappingFragment StoreEntitySet="DETALLE_LESION">
+          <ScalarProperty Name="IDdetalleLes" ColumnName="IDdetalleLes" />
+          <ScalarProperty Name="IDincidente" ColumnName="IDincidente" />
+          <ScalarProperty Name="tipo_lesion" ColumnName="tipo_lesion" />
+          <ScalarProperty Name="cometario" ColumnName="cometario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIAS">
+      <EntityTypeMapping TypeName="Model.DIAS">
+        <MappingFragment StoreEntitySet="DIAS">
+          <ScalarProperty Name="IDDIAS" ColumnName="IDDIAS" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOSIS">
+      <EntityTypeMapping TypeName="Model.DOSIS">
+        <MappingFragment StoreEntitySet="DOSIS">
+          <ScalarProperty Name="IDDosis" ColumnName="IDDosis" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO">
+      <EntityTypeMapping TypeName="Model.ESTADO">
+        <MappingFragment StoreEntitySet="ESTADO">
+          <ScalarProperty Name="IDEstado" ColumnName="IDEstado" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genero">
+      <EntityTypeMapping TypeName="Model.genero">
+        <MappingFragment StoreEntitySet="genero">
+          <ScalarProperty Name="Idgenero" ColumnName="Idgenero" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRADO_INSTRUCCION">
+      <EntityTypeMapping TypeName="Model.GRADO_INSTRUCCION">
+        <MappingFragment StoreEntitySet="GRADO_INSTRUCCION">
+          <ScalarProperty Name="IDgrado" ColumnName="IDgrado" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRUPO_CLASE">
+      <EntityTypeMapping TypeName="Model.GRUPO_CLASE">
+        <MappingFragment StoreEntitySet="GRUPO_CLASE">
+          <ScalarProperty Name="IDgrupo" ColumnName="IDgrupo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="AÑO" ColumnName="AÑO" />
+          <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+          <ScalarProperty Name="TUTOR" ColumnName="TUTOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hogar">
+      <EntityTypeMapping TypeName="Model.Hogar">
+        <MappingFragment StoreEntitySet="Hogar">
+          <ScalarProperty Name="Idhogar" ColumnName="Idhogar" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INCIDENTE_MEDICO">
+      <EntityTypeMapping TypeName="Model.INCIDENTE_MEDICO">
+        <MappingFragment StoreEntitySet="INCIDENTE_MEDICO">
+          <ScalarProperty Name="IDincidente" ColumnName="IDincidente" />
+          <ScalarProperty Name="idniño" ColumnName="idniño" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="monto_desembolsado" ColumnName="monto_desembolsado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LESION">
+      <EntityTypeMapping TypeName="Model.LESION">
+        <MappingFragment StoreEntitySet="LESION">
+          <ScalarProperty Name="IDLesion" ColumnName="IDLesion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="miembros_hogar">
+      <EntityTypeMapping TypeName="Model.miembros_hogar">
+        <MappingFragment StoreEntitySet="miembros_hogar">
+          <ScalarProperty Name="Idmiembro" ColumnName="Idmiembro" />
+          <ScalarProperty Name="idhogar" ColumnName="idhogar" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="idrol" ColumnName="idrol" />
+          <ScalarProperty Name="cuidador" ColumnName="cuidador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Niño">
+      <EntityTypeMapping TypeName="Model.Niño">
+        <MappingFragment StoreEntitySet="Niño">
+          <ScalarProperty Name="Idniño" ColumnName="Idniño" />
+          <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+          <ScalarProperty Name="Idhogar" ColumnName="Idhogar" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="fechanacimiento" ColumnName="fechanacimiento" />
+          <ScalarProperty Name="nivel" ColumnName="nivel" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="Grupo_clase" ColumnName="Grupo_clase" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nivel">
+      <EntityTypeMapping TypeName="Model.Nivel">
+        <MappingFragment StoreEntitySet="Nivel">
+          <ScalarProperty Name="Idnivel" ColumnName="Idnivel" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERIODO">
+      <EntityTypeMapping TypeName="Model.PERIODO">
+        <MappingFragment StoreEntitySet="PERIODO">
+          <ScalarProperty Name="IDPERIODO" ColumnName="IDPERIODO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="Model.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="Idrol" ColumnName="Idrol" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBCATEGORIA_ENFERMEDAD">
+      <EntityTypeMapping TypeName="Model.SUBCATEGORIA_ENFERMEDAD">
+        <MappingFragment StoreEntitySet="SUBCATEGORIA_ENFERMEDAD">
+          <ScalarProperty Name="IDSubEnf" ColumnName="IDSubEnf" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo">
+      <EntityTypeMapping TypeName="Model.Tipo">
+        <MappingFragment StoreEntitySet="Tipo">
+          <ScalarProperty Name="IDtipo" ColumnName="IDtipo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_INMUNIZACION">
+      <EntityTypeMapping TypeName="Model.TIPO_INMUNIZACION">
+        <MappingFragment StoreEntitySet="TIPO_INMUNIZACION">
+          <ScalarProperty Name="IDT_Inmunizacion" ColumnName="IDT_Inmunizacion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="nro_dosis" ColumnName="nro_dosis" />
+          <ScalarProperty Name="periodo" ColumnName="periodo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TUTOR">
+      <EntityTypeMapping TypeName="Model.TUTOR">
+        <MappingFragment StoreEntitySet="TUTOR">
+          <ScalarProperty Name="IDTutor" ColumnName="IDTutor" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="grado_instruccion" ColumnName="grado_instruccion" />
+          <ScalarProperty Name="fecha_inicio_voluntariado" ColumnName="fecha_inicio_voluntariado" />
+          <ScalarProperty Name="estado" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="Model.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

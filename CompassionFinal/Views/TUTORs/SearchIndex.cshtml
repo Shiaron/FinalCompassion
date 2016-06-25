@@ -1,0 +1,73 @@
+﻿@model IEnumerable<CompassionFinal.TUTOR>
+
+@{
+    ViewBag.Title = "Buscar | Tutor";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>
+
+@using (Html.BeginForm("SearchIndex", "TUTOR", FormMethod.Get))
+{
+    <p>
+        Apellidos: @Html.TextBox("SearchString")
+        <input type="submit" class="btn btn-info" value="Buscar" />
+    </p>
+}
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha_inicio_voluntariado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESTADO1.detalle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GRADO_INSTRUCCION1.nombres)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.telefono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fecha_inicio_voluntariado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ESTADO1.detalle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GRADO_INSTRUCCION1.nombres)
+            </td>
+            <td>
+                <a class="btn btn-info" href="/Tutor/Edit/@item.IDTutor"> <i class="glyphicon glyphicon-wrench"></i></a>
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+

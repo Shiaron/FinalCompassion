@@ -1,0 +1,89 @@
+﻿@model CompassionFinal.Niño
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Esta seguro de eliminar este registro?</h3>
+<div>
+    <h4>Niño</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DNI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DNI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechanacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechanacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.genero1.detalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.genero1.detalle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GRUPO_CLASE1.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GRUPO_CLASE1.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hogar.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hogar.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nivel1.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nivel1.nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "SearchIndex")
+        </div>
+    }
+</div>

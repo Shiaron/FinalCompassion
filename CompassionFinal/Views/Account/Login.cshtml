@@ -1,0 +1,105 @@
+﻿@using CompassionFinal.Models
+@model LoginViewModel
+@{
+    Layout = null;
+    ViewBag.Title = "Log in";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <title>@ViewBag.Title - Compassion</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+
+    <style type="text/css">
+        body {
+            color: #a1a1a1;
+            font-family: 'PT Sans';
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0px;
+            background-image: url('../../img/3.png');
+        }
+    </style>
+    <div class="row">
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="col-xs-6 col-md-3"></div>
+            <div class="col-xs-6 col-md-5">
+                <br />
+                <br />
+
+
+
+                <div style="position:absolute fixed;z-index: 0">
+                    <img src="\img\20.png" />
+                </div>
+
+                <br />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">Usuario</label>
+                        <div class="col-sm-9">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">Contraseña</label>
+                        <div class="col-sm-9">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-3 col-md-5">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-8">
+                            <input type="submit" value="Iniciar Sesión" class="btn btn-info" color="#41b7ba" />
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div style="position:fixed; bottom:5px; right:0px;z-index: 0">
+                    <img src="\img\9.png" />
+                </div>
+
+                <div style="position:fixed; top:0px; left:0px;z-index: -9999">
+                    <img src="" />
+                </div>
+
+                <div style="background:repeat; top:0px; right:0px;z-index: -9999">
+                    <img src="\img\3.png" />
+                </div>
+                <div class="col-xs-6 col-md-4"></div>
+            </div>
+
+        }
+    </div>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</body>
+</html>
+

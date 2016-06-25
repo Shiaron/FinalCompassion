@@ -1,0 +1,67 @@
+﻿@model CompassionFinal.TUTOR
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TUTOR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha_inicio_voluntariado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha_inicio_voluntariado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESTADO1.detalle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESTADO1.detalle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GRADO_INSTRUCCION1.nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GRADO_INSTRUCCION1.nombres)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDTutor }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

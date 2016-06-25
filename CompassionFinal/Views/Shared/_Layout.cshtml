@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+    <title>@ViewBag.Title - Compassion</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink("Compassion", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+
+                         
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Niño
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Nuevo", "Create", "Hogar")</li>
+
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>@Html.ActionLink("Ver lista", "SearchIndex", "Niño")</li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>@Html.ActionLink("Hogares", "SearchIndex", "Hogar")</li>
+
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Asistencia
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Ver", "SearchIndex", "ASISTENCIAs")</li>
+
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>@Html.ActionLink("Registrar", "Create", "ASISTENCIAs")</li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>@Html.ActionLink("Grupo Clase", "SearchIndex", "GRUPO_CLASE")</li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>@Html.ActionLink("Tutores", "SearchIndex", "TUTORs")</li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Incidente Médico
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Nuevo", "Create", "INCIDENTE_MEDICO")</li>
+
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>@Html.ActionLink("Ver lista", "SearchIndex", "INCIDENTE_MEDICO")</li>
+                                    
+
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Inmunizaciones
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Nuevo", "Create", "DETALLE_INMUNIZACIONES")</li>
+
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>@Html.ActionLink("Control", "SearchIndex", "DETALLE_INMUNIZACIONES")</li>
+                                    <li role="separator" class="divider"></li>
+
+                                    <li>@Html.ActionLink("Inmunizacion", "Index", "TIPO_INMUNIZACION")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Usuarios", "Register", "Account")</li>
+
+                        </ul>
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+
+            <div>
+                <div class="col-md-6"></div>     <img class="img-responsive" src="\img\9.png" alt="Responsive image" />
+            </div>
+            <div><p>&copy; @DateTime.Now.Year I - FIS UNICA VII ciclo  </p></div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

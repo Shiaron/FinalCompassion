@@ -1,0 +1,92 @@
+﻿@model IEnumerable<CompassionFinal.Niño>
+
+@{
+    ViewBag.Title = "Buscar | Niño";
+}
+
+<h2>Buscar por Código</h2>
+
+
+
+@using (Html.BeginForm("SearchIndex", "Niño", FormMethod.Get))
+{
+    <p>
+        Codigo del niño: @Html.TextBox("SearchString")
+        <input type="submit" class="btn btn-info" value="Buscar" />
+    </p>
+}
+
+
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            CODIGO
+        </th>
+        <th>
+            NOMBRES
+        </th>
+        <th>
+            HOGAR
+        </th>
+        <th>
+            F.NACIMIENTO
+        </th>
+     
+        <th>
+            GENERO
+        </th>
+        <th>
+            CLASE
+        </th>
+
+        <th>
+            NIVEL
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idniño)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hogar.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechanacimiento)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.genero1.detalle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GRUPO_CLASE1.descripcion)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Nivel1.nombre)
+            </td>
+            <td>
+                <a class="btn btn-info" href="/Niño/Edit/@item.Idniño"> <i class="glyphicon glyphicon-wrench"></i></a>
+                || <a class="btn btn-info" href="/Niño/Delete/@item.Idniño"> <i class="glyphicon glyphicon-trash"></i></a>
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p>
+
+    <a class="btn btn-info" href="/Hogar/SearchIndex/"> <i class="glyphicon glyphicon-info-sign"></i>Editar Lista - Hogares</a> ||
+    <a class="btn btn-info" href="/Miembros_Hogar/SearchIndex/"> <i class="glyphicon glyphicon-info-sign"></i>Editar Lista - Miembros de Hogar</a>
+
+
+</p>

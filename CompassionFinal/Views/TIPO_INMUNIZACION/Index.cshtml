@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CompassionFinal.TIPO_INMUNIZACION>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tipo de inmunizacion</h2>
+
+<p>
+    @Html.ActionLink("Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Nombre
+        </th>
+        <th>
+            N° Dosis
+        </th>
+        <th>
+            PERIODO(meses)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nro_dosis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.periodo)
+        </td>
+        <td>
+            <a class="btn btn-info" href="/TIPO_INMUNIZACION/Edit/@item.IDT_Inmunizacion"> <i class="glyphicon glyphicon-wrench"></i></a>
+            || <a class="btn btn-info" href="/TIPO_INMUNIZACION/Delete/@item.IDT_Inmunizacion"> <i class="glyphicon glyphicon-trash"></i></a>
+
+
+        </td>
+    </tr>
+}
+
+</table>

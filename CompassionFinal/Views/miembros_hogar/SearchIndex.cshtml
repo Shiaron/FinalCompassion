@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CompassionFinal.miembros_hogar>
+
+@{
+    ViewBag.Title = "Buscar | Miembros de Familia";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("SearchIndex", "miembros_hogar", FormMethod.Get))
+{
+    <p>
+        Familia : @Html.TextBox("SearchString")
+        <input type="submit" class="btn btn-info" value="Buscar" />
+    </p>
+}
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cuidador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hogar.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rol.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cuidador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hogar.nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rol.nombre)
+            </td>
+            <td>
+                <a class="btn btn-info" href="/Miembros_hogar/Edit/@item.Idmiembro"> <i class="glyphicon glyphicon-wrench"></i></a>
+                || <a class="btn btn-info" href="/Miembros_hogar/Delete/@item.Idmiembro"> <i class="glyphicon glyphicon-trash"></i></a>
+
+            </td>
+        </tr>
+    }
+
+</table>
+

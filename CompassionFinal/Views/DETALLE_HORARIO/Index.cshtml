@@ -1,0 +1,40 @@
+﻿@model IEnumerable<CompassionFinal.DETALLE_HORARIO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GRUPO_CLASE.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIAS1.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GRUPO_CLASE.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIAS1.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDDetHorario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDDetHorario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDDetHorario })
+        </td>
+    </tr>
+}
+
+</table>

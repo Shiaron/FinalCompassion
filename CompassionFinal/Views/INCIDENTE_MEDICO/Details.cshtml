@@ -1,0 +1,51 @@
+﻿@model CompassionFinal.INCIDENTE_MEDICO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>INCIDENTE_MEDICO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monto_desembolsado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monto_desembolsado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Niño.Nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Niño.Nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tipo1.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tipo1.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDincidente }) |
+    @Html.ActionLink("Ver lista", "SearchIndex")
+</p>

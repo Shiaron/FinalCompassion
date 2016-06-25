@@ -1,0 +1,60 @@
+﻿@model IEnumerable<CompassionFinal.GRUPO_CLASE>
+
+@{
+    ViewBag.Title = "SearchIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>GRUPO DE CLASE</h3>
+
+<p>
+    @Html.ActionLink("Crear uno nuevo", "Create")
+</p>
+
+@using (Html.BeginForm("SearchIndex", "GRUPO_CLASE", FormMethod.Get))
+{
+    <p>
+        NOMBRE DE GRUPO DE CLASE : @Html.TextBox("SearchString")
+        <input type="submit" class="btn btn-info" value="Buscar" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            NOMBRE DE CLASE
+        </th>
+        <th>
+            AÑO
+        </th>
+        <th>
+            PERIODO
+        </th>
+        <th>
+            TUTOR
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AÑO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERIODO1.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUTOR1.nombres)
+        </td>
+        <td>
+            <a class="btn btn-info" href="/GRUPO_CLASE/Edit/@item.IDgrupo"> <i class="glyphicon glyphicon-wrench"></i></a>
+            || <a class="btn btn-info" href="/GRUPO_CLASE/Delete/@item.IDgrupo"> <i class="glyphicon glyphicon-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

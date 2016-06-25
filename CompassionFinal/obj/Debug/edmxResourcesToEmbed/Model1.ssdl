@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ASISTENCIA">
+    <Key>
+      <PropertyRef Name="IDasistencia" />
+    </Key>
+    <Property Name="IDasistencia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idniño" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="asistencia" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CATEGORIA_ENFERMEDAD">
+    <Key>
+      <PropertyRef Name="IDCategEnf" />
+    </Key>
+    <Property Name="IDCategEnf" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DETALLE_ENFERMEDAD">
+    <Key>
+      <PropertyRef Name="IDdetalleEnf" />
+    </Key>
+    <Property Name="IDdetalleEnf" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idincidente" Type="int" Nullable="false" />
+    <Property Name="categoria" Type="int" Nullable="false" />
+    <Property Name="subcategoria" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="DETALLE_HORARIO">
+    <Key>
+      <PropertyRef Name="IDDetHorario" />
+    </Key>
+    <Property Name="IDDetHorario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDgrupo" Type="int" Nullable="false" />
+    <Property Name="dias" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETALLE_INMUNIZACIONES">
+    <Key>
+      <PropertyRef Name="IDInmunizacion" />
+    </Key>
+    <Property Name="IDInmunizacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idniño" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="tipo_inmunizacion" Type="int" Nullable="false" />
+    <Property Name="dosis" Type="int" Nullable="false" />
+    <Property Name="estado" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DETALLE_LESION">
+    <Key>
+      <PropertyRef Name="IDdetalleLes" />
+    </Key>
+    <Property Name="IDdetalleLes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDincidente" Type="int" Nullable="false" />
+    <Property Name="tipo_lesion" Type="int" Nullable="false" />
+    <Property Name="cometario" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="DIAS">
+    <Key>
+      <PropertyRef Name="IDDIAS" />
+    </Key>
+    <Property Name="IDDIAS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DOSIS">
+    <Key>
+      <PropertyRef Name="IDDosis" />
+    </Key>
+    <Property Name="IDDosis" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO">
+    <Key>
+      <PropertyRef Name="IDEstado" />
+    </Key>
+    <Property Name="IDEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="detalle" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="genero">
+    <Key>
+      <PropertyRef Name="Idgenero" />
+    </Key>
+    <Property Name="Idgenero" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="detalle" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="GRADO_INSTRUCCION">
+    <Key>
+      <PropertyRef Name="IDgrado" />
+    </Key>
+    <Property Name="IDgrado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GRUPO_CLASE">
+    <Key>
+      <PropertyRef Name="IDgrupo" />
+    </Key>
+    <Property Name="IDgrupo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="AÑO" Type="int" Nullable="false" />
+    <Property Name="PERIODO" Type="int" Nullable="false" />
+    <Property Name="TUTOR" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hogar">
+    <Key>
+      <PropertyRef Name="Idhogar" />
+    </Key>
+    <Property Name="Idhogar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INCIDENTE_MEDICO">
+    <Key>
+      <PropertyRef Name="IDincidente" />
+    </Key>
+    <Property Name="IDincidente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idniño" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="tipo" Type="int" Nullable="false" />
+    <Property Name="monto_desembolsado" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LESION">
+    <Key>
+      <PropertyRef Name="IDLesion" />
+    </Key>
+    <Property Name="IDLesion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="miembros_hogar">
+    <Key>
+      <PropertyRef Name="Idmiembro" />
+    </Key>
+    <Property Name="Idmiembro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idhogar" Type="int" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="idrol" Type="int" Nullable="false" />
+    <Property Name="cuidador" Type="bit" />
+  </EntityType>
+  <EntityType Name="Niño">
+    <Key>
+      <PropertyRef Name="Idniño" />
+    </Key>
+    <Property Name="Idniño" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Nombres" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Idhogar" Type="int" Nullable="false" />
+    <Property Name="Genero" Type="int" Nullable="false" />
+    <Property Name="DNI" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="fechanacimiento" Type="date" Nullable="false" />
+    <Property Name="nivel" Type="int" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Grupo_clase" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nivel">
+    <Key>
+      <PropertyRef Name="Idnivel" />
+    </Key>
+    <Property Name="Idnivel" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PERIODO">
+    <Key>
+      <PropertyRef Name="IDPERIODO" />
+    </Key>
+    <Property Name="IDPERIODO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="Idrol" />
+    </Key>
+    <Property Name="Idrol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SUBCATEGORIA_ENFERMEDAD">
+    <Key>
+      <PropertyRef Name="IDSubEnf" />
+    </Key>
+    <Property Name="IDSubEnf" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="categoria" Type="int" />
+  </EntityType>
+  <EntityType Name="Tipo">
+    <Key>
+      <PropertyRef Name="IDtipo" />
+    </Key>
+    <Property Name="IDtipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPO_INMUNIZACION">
+    <Key>
+      <PropertyRef Name="IDT_Inmunizacion" />
+    </Key>
+    <Property Name="IDT_Inmunizacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="nro_dosis" Type="int" Nullable="false" />
+    <Property Name="periodo" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TUTOR">
+    <Key>
+      <PropertyRef Name="IDTutor" />
+    </Key>
+    <Property Name="IDTutor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="telefono" Type="char" MaxLength="9" />
+    <Property Name="grado_instruccion" Type="int" Nullable="false" />
+    <Property Name="fecha_inicio_voluntariado" Type="date" Nullable="false" />
+    <Property Name="estado" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ASISTENCIA_NIÑO">
+    <End Role="Niño" Type="Self.Niño" Multiplicity="1" />
+    <End Role="ASISTENCIA" Type="Self.ASISTENCIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Niño">
+        <PropertyRef Name="Idniño" />
+      </Principal>
+      <Dependent Role="ASISTENCIA">
+        <PropertyRef Name="idniño" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_det_horario">
+    <End Role="GRUPO_CLASE" Type="Self.GRUPO_CLASE" Multiplicity="1" />
+    <End Role="DETALLE_HORARIO" Type="Self.DETALLE_HORARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GRUPO_CLASE">
+        <PropertyRef Name="IDgrupo" />
+      </Principal>
+      <Dependent Role="DETALLE_HORARIO">
+        <PropertyRef Name="IDgrupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DET_HORARIO_D">
+    <End Role="DIAS" Type="Self.DIAS" Multiplicity="1" />
+    <End Role="DETALLE_HORARIO" Type="Self.DETALLE_HORARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIAS">
+        <PropertyRef Name="IDDIAS" />
+      </Principal>
+      <Dependent Role="DETALLE_HORARIO">
+        <PropertyRef Name="dias" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_ENFERMEDAD_CATEGORIA">
+    <End Role="CATEGORIA_ENFERMEDAD" Type="Self.CATEGORIA_ENFERMEDAD" Multiplicity="1" />
+    <End Role="DETALLE_ENFERMEDAD" Type="Self.DETALLE_ENFERMEDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIA_ENFERMEDAD">
+        <PropertyRef Name="IDCategEnf" />
+      </Principal>
+      <Dependent Role="DETALLE_ENFERMEDAD">
+        <PropertyRef Name="categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_ENFERMEDAD_INCIDENTE">
+    <End Role="INCIDENTE_MEDICO" Type="Self.INCIDENTE_MEDICO" Multiplicity="1" />
+    <End Role="DETALLE_ENFERMEDAD" Type="Self.DETALLE_ENFERMEDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INCIDENTE_MEDICO">
+        <PropertyRef Name="IDincidente" />
+      </Principal>
+      <Dependent Role="DETALLE_ENFERMEDAD">
+        <PropertyRef Name="idincidente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_ENFERMEDAD_SUBCATEGORIA">
+    <End Role="SUBCATEGORIA_ENFERMEDAD" Type="Self.SUBCATEGORIA_ENFERMEDAD" Multiplicity="1" />
+    <End Role="DETALLE_ENFERMEDAD" Type="Self.DETALLE_ENFERMEDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUBCATEGORIA_ENFERMEDAD">
+        <PropertyRef Name="IDSubEnf" />
+      </Principal>
+      <Dependent Role="DETALLE_ENFERMEDAD">
+        <PropertyRef Name="subcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_LESION_INCIDENTE">
+    <End Role="INCIDENTE_MEDICO" Type="Self.INCIDENTE_MEDICO" Multiplicity="1" />
+    <End Role="DETALLE_LESION" Type="Self.DETALLE_LESION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INCIDENTE_MEDICO">
+        <PropertyRef Name="IDincidente" />
+      </Principal>
+      <Dependent Role="DETALLE_LESION">
+        <PropertyRef Name="IDincidente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DETALLE_LESION_LESION">
+    <End Role="LESION" Type="Self.LESION" Multiplicity="1" />
+    <End Role="DETALLE_LESION" Type="Self.DETALLE_LESION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LESION">
+        <PropertyRef Name="IDLesion" />
+      </Principal>
+      <Dependent Role="DETALLE_LESION">
+        <PropertyRef Name="tipo_lesion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dGRUPO_CLASE_P">
+    <End Role="PERIODO" Type="Self.PERIODO" Multiplicity="1" />
+    <End Role="GRUPO_CLASE" Type="Self.GRUPO_CLASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERIODO">
+        <PropertyRef Name="IDPERIODO" />
+      </Principal>
+      <Dependent Role="GRUPO_CLASE">
+        <PropertyRef Name="PERIODO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dGRUPO_CLASE_T">
+    <End Role="TUTOR" Type="Self.TUTOR" Multiplicity="1" />
+    <End Role="GRUPO_CLASE" Type="Self.GRUPO_CLASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TUTOR">
+        <PropertyRef Name="IDTutor" />
+      </Principal>
+      <Dependent Role="GRUPO_CLASE">
+        <PropertyRef Name="TUTOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DOSIS_INMUNIZACIONES">
+    <End Role="DOSIS" Type="Self.DOSIS" Multiplicity="1" />
+    <End Role="DETALLE_INMUNIZACIONES" Type="Self.DETALLE_INMUNIZACIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DOSIS">
+        <PropertyRef Name="IDDosis" />
+      </Principal>
+      <Dependent Role="DETALLE_INMUNIZACIONES">
+        <PropertyRef Name="dosis" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HOGAR_MIEMBROS_HOGAR">
+    <End Role="Hogar" Type="Self.Hogar" Multiplicity="1" />
+    <End Role="miembros_hogar" Type="Self.miembros_hogar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hogar">
+        <PropertyRef Name="Idhogar" />
+      </Principal>
+      <Dependent Role="miembros_hogar">
+        <PropertyRef Name="idhogar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INCIDENTE_MEDICO_NIÑO">
+    <End Role="Niño" Type="Self.Niño" Multiplicity="1" />
+    <End Role="INCIDENTE_MEDICO" Type="Self.INCIDENTE_MEDICO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Niño">
+        <PropertyRef Name="Idniño" />
+      </Principal>
+      <Dependent Role="INCIDENTE_MEDICO">
+        <PropertyRef Name="idniño" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INCIDENTE_MEDICO_TIPO">
+    <End Role="Tipo" Type="Self.Tipo" Multiplicity="1" />
+    <End Role="INCIDENTE_MEDICO" Type="Self.INCIDENTE_MEDICO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo">
+        <PropertyRef Name="IDtipo" />
+      </Principal>
+      <Dependent Role="INCIDENTE_MEDICO">
+        <PropertyRef Name="tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_inmunizacion_niño">
+    <End Role="Niño" Type="Self.Niño" Multiplicity="1" />
+    <End Role="DETALLE_INMUNIZACIONES" Type="Self.DETALLE_INMUNIZACIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Niño">
+        <PropertyRef Name="Idniño" />
+      </Principal>
+      <Dependent Role="DETALLE_INMUNIZACIONES">
+        <PropertyRef Name="idniño" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MIEMBROS_HOGAR_ROL">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+    <End Role="miembros_hogar" Type="Self.miembros_hogar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="Idrol" />
+      </Principal>
+      <Dependent Role="miembros_hogar">
+        <PropertyRef Name="idrol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NIÑO_GENERO">
+    <End Role="genero" Type="Self.genero" Multiplicity="1" />
+    <End Role="Niño" Type="Self.Niño" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="genero">
+        <PropertyRef Name="Idgenero" />
+      </Principal>
+      <Dependent Role="Niño">
+        <PropertyRef Name="Genero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NIÑO_GRUPO">
+    <End Role="GRUPO_CLASE" Type="Self.GRUPO_CLASE" Multiplicity="1" />
+    <End Role="Niño" Type="Self.Niño" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GRUPO_CLASE">
+        <PropertyRef Name="IDgrupo" />
+      </Principal>
+      <Dependent Role="Niño">
+        <PropertyRef Name="Grupo_clase" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NIÑO_HOGAR">
+    <End Role="Hogar" Type="Self.Hogar" Multiplicity="1" />
+    <End Role="Niño" Type="Self.Niño" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hogar">
+        <PropertyRef Name="Idhogar" />
+      </Principal>
+      <Dependent Role="Niño">
+        <PropertyRef Name="Idhogar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NIÑO_NIVEL">
+    <End Role="Nivel" Type="Self.Nivel" Multiplicity="1" />
+    <End Role="Niño" Type="Self.Niño" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nivel">
+        <PropertyRef Name="Idnivel" />
+      </Principal>
+      <Dependent Role="Niño">
+        <PropertyRef Name="nivel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUBCATEGORIA_ENFERMEDAD">
+    <End Role="CATEGORIA_ENFERMEDAD" Type="Self.CATEGORIA_ENFERMEDAD" Multiplicity="0..1" />
+    <End Role="SUBCATEGORIA_ENFERMEDAD" Type="Self.SUBCATEGORIA_ENFERMEDAD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIA_ENFERMEDAD">
+        <PropertyRef Name="IDCategEnf" />
+      </Principal>
+      <Dependent Role="SUBCATEGORIA_ENFERMEDAD">
+        <PropertyRef Name="categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TIPO_INMUNIZACION">
+    <End Role="TIPO_INMUNIZACION" Type="Self.TIPO_INMUNIZACION" Multiplicity="1" />
+    <End Role="DETALLE_INMUNIZACIONES" Type="Self.DETALLE_INMUNIZACIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_INMUNIZACION">
+        <PropertyRef Name="IDT_Inmunizacion" />
+      </Principal>
+      <Dependent Role="DETALLE_INMUNIZACIONES">
+        <PropertyRef Name="tipo_inmunizacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TUTOR_ESTADO">
+    <End Role="ESTADO" Type="Self.ESTADO" Multiplicity="1" />
+    <End Role="TUTOR" Type="Self.TUTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO">
+        <PropertyRef Name="IDEstado" />
+      </Principal>
+      <Dependent Role="TUTOR">
+        <PropertyRef Name="estado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TUTOR_grado">
+    <End Role="GRADO_INSTRUCCION" Type="Self.GRADO_INSTRUCCION" Multiplicity="1" />
+    <End Role="TUTOR" Type="Self.TUTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GRADO_INSTRUCCION">
+        <PropertyRef Name="IDgrado" />
+      </Principal>
+      <Dependent Role="TUTOR">
+        <PropertyRef Name="grado_instruccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ASISTENCIA" EntityType="Self.ASISTENCIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGORIA_ENFERMEDAD" EntityType="Self.CATEGORIA_ENFERMEDAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DETALLE_ENFERMEDAD" EntityType="Self.DETALLE_ENFERMEDAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DETALLE_HORARIO" EntityType="Self.DETALLE_HORARIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DETALLE_INMUNIZACIONES" EntityType="Self.DETALLE_INMUNIZACIONES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DETALLE_LESION" EntityType="Self.DETALLE_LESION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DIAS" EntityType="Self.DIAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DOSIS" EntityType="Self.DOSIS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADO" EntityType="Self.ESTADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="genero" EntityType="Self.genero" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GRADO_INSTRUCCION" EntityType="Self.GRADO_INSTRUCCION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GRUPO_CLASE" EntityType="Self.GRUPO_CLASE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hogar" EntityType="Self.Hogar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INCIDENTE_MEDICO" EntityType="Self.INCIDENTE_MEDICO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LESION" EntityType="Self.LESION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="miembros_hogar" EntityType="Self.miembros_hogar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Niño" EntityType="Self.Niño" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nivel" EntityType="Self.Nivel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PERIODO" EntityType="Self.PERIODO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SUBCATEGORIA_ENFERMEDAD" EntityType="Self.SUBCATEGORIA_ENFERMEDAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipo" EntityType="Self.Tipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_INMUNIZACION" EntityType="Self.TIPO_INMUNIZACION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TUTOR" EntityType="Self.TUTOR" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ASISTENCIA_NIÑO" Association="Self.FK_ASISTENCIA_NIÑO">
+      <End Role="Niño" EntitySet="Niño" />
+      <End Role="ASISTENCIA" EntitySet="ASISTENCIA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_det_horario" Association="Self.FK_det_horario">
+      <End Role="GRUPO_CLASE" EntitySet="GRUPO_CLASE" />
+      <End Role="DETALLE_HORARIO" EntitySet="DETALLE_HORARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DET_HORARIO_D" Association="Self.FK_DET_HORARIO_D">
+      <End Role="DIAS" EntitySet="DIAS" />
+      <End Role="DETALLE_HORARIO" EntitySet="DETALLE_HORARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_ENFERMEDAD_CATEGORIA" Association="Self.FK_DETALLE_ENFERMEDAD_CATEGORIA">
+      <End Role="CATEGORIA_ENFERMEDAD" EntitySet="CATEGORIA_ENFERMEDAD" />
+      <End Role="DETALLE_ENFERMEDAD" EntitySet="DETALLE_ENFERMEDAD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_ENFERMEDAD_INCIDENTE" Association="Self.FK_DETALLE_ENFERMEDAD_INCIDENTE">
+      <End Role="INCIDENTE_MEDICO" EntitySet="INCIDENTE_MEDICO" />
+      <End Role="DETALLE_ENFERMEDAD" EntitySet="DETALLE_ENFERMEDAD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_ENFERMEDAD_SUBCATEGORIA" Association="Self.FK_DETALLE_ENFERMEDAD_SUBCATEGORIA">
+      <End Role="SUBCATEGORIA_ENFERMEDAD" EntitySet="SUBCATEGORIA_ENFERMEDAD" />
+      <End Role="DETALLE_ENFERMEDAD" EntitySet="DETALLE_ENFERMEDAD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_LESION_INCIDENTE" Association="Self.FK_DETALLE_LESION_INCIDENTE">
+      <End Role="INCIDENTE_MEDICO" EntitySet="INCIDENTE_MEDICO" />
+      <End Role="DETALLE_LESION" EntitySet="DETALLE_LESION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DETALLE_LESION_LESION" Association="Self.FK_DETALLE_LESION_LESION">
+      <End Role="LESION" EntitySet="LESION" />
+      <End Role="DETALLE_LESION" EntitySet="DETALLE_LESION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dGRUPO_CLASE_P" Association="Self.FK_dGRUPO_CLASE_P">
+      <End Role="PERIODO" EntitySet="PERIODO" />
+      <End Role="GRUPO_CLASE" EntitySet="GRUPO_CLASE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dGRUPO_CLASE_T" Association="Self.FK_dGRUPO_CLASE_T">
+      <End Role="TUTOR" EntitySet="TUTOR" />
+      <End Role="GRUPO_CLASE" EntitySet="GRUPO_CLASE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DOSIS_INMUNIZACIONES" Association="Self.FK_DOSIS_INMUNIZACIONES">
+      <End Role="DOSIS" EntitySet="DOSIS" />
+      <End Role="DETALLE_INMUNIZACIONES" EntitySet="DETALLE_INMUNIZACIONES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HOGAR_MIEMBROS_HOGAR" Association="Self.FK_HOGAR_MIEMBROS_HOGAR">
+      <End Role="Hogar" EntitySet="Hogar" />
+      <End Role="miembros_hogar" EntitySet="miembros_hogar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INCIDENTE_MEDICO_NIÑO" Association="Self.FK_INCIDENTE_MEDICO_NIÑO">
+      <End Role="Niño" EntitySet="Niño" />
+      <End Role="INCIDENTE_MEDICO" EntitySet="INCIDENTE_MEDICO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INCIDENTE_MEDICO_TIPO" Association="Self.FK_INCIDENTE_MEDICO_TIPO">
+      <End Role="Tipo" EntitySet="Tipo" />
+      <End Role="INCIDENTE_MEDICO" EntitySet="INCIDENTE_MEDICO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_inmunizacion_niño" Association="Self.FK_inmunizacion_niño">
+      <End Role="Niño" EntitySet="Niño" />
+      <End Role="DETALLE_INMUNIZACIONES" EntitySet="DETALLE_INMUNIZACIONES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MIEMBROS_HOGAR_ROL" Association="Self.FK_MIEMBROS_HOGAR_ROL">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="miembros_hogar" EntitySet="miembros_hogar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NIÑO_GENERO" Association="Self.FK_NIÑO_GENERO">
+      <End Role="genero" EntitySet="genero" />
+      <End Role="Niño" EntitySet="Niño" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NIÑO_GRUPO" Association="Self.FK_NIÑO_GRUPO">
+      <End Role="GRUPO_CLASE" EntitySet="GRUPO_CLASE" />
+      <End Role="Niño" EntitySet="Niño" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NIÑO_HOGAR" Association="Self.FK_NIÑO_HOGAR">
+      <End Role="Hogar" EntitySet="Hogar" />
+      <End Role="Niño" EntitySet="Niño" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NIÑO_NIVEL" Association="Self.FK_NIÑO_NIVEL">
+      <End Role="Nivel" EntitySet="Nivel" />
+      <End Role="Niño" EntitySet="Niño" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUBCATEGORIA_ENFERMEDAD" Association="Self.FK_SUBCATEGORIA_ENFERMEDAD">
+      <End Role="CATEGORIA_ENFERMEDAD" EntitySet="CATEGORIA_ENFERMEDAD" />
+      <End Role="SUBCATEGORIA_ENFERMEDAD" EntitySet="SUBCATEGORIA_ENFERMEDAD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TIPO_INMUNIZACION" Association="Self.FK_TIPO_INMUNIZACION">
+      <End Role="TIPO_INMUNIZACION" EntitySet="TIPO_INMUNIZACION" />
+      <End Role="DETALLE_INMUNIZACIONES" EntitySet="DETALLE_INMUNIZACIONES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TUTOR_ESTADO" Association="Self.FK_TUTOR_ESTADO">
+      <End Role="ESTADO" EntitySet="ESTADO" />
+      <End Role="TUTOR" EntitySet="TUTOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TUTOR_grado" Association="Self.FK_TUTOR_grado">
+      <End Role="GRADO_INSTRUCCION" EntitySet="GRADO_INSTRUCCION" />
+      <End Role="TUTOR" EntitySet="TUTOR" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

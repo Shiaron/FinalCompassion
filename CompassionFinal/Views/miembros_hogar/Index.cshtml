@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CompassionFinal.miembros_hogar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cuidador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hogar.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rol.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cuidador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hogar.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rol.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Idmiembro }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Idmiembro }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Idmiembro })
+        </td>
+    </tr>
+}
+
+</table>

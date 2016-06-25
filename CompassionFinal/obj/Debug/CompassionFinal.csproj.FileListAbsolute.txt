@@ -1,0 +1,138 @@
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\csc.exe
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\System.Collections.Immutable.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\vbc.exe
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\VBCSCompiler.exe
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\VBCSCompiler.exe.config
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\CompassionFinal.dll.config
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\CompassionFinal.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\CompassionFinal.pdb
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Antlr3.Runtime.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\EntityFramework.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\EntityFramework.SqlServer.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Google.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Web.Infrastructure.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Newtonsoft.Json.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Owin.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Helpers.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Mvc.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Optimization.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Razor.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.Deployment.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.Razor.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\WebGrease.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Helpers.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Mvc.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Optimization.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Razor.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.Deployment.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.Razor.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Antlr3.Runtime.pdb
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Newtonsoft.Json.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\EntityFramework.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\EntityFramework.SqlServer.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Google.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\obj\Debug\CompassionFinal.dll
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\obj\Debug\CompassionFinal.pdb
+c:\users\eduardo - pc\documents\visual studio 2015\Projects\CompassionFinal\CompassionFinal\obj\Debug\CompassionFinal.csprojResolveAssemblyReference.cache
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\csc.exe
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\vbc.exe
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\VBCSCompiler.exe
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\CompassionFinal.dll.config
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\CompassionFinal.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\CompassionFinal.pdb
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Antlr3.Runtime.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\EntityFramework.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\EntityFramework.SqlServer.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Newtonsoft.Json.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Owin.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Helpers.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Mvc.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Optimization.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Razor.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.Deployment.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.Razor.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\WebGrease.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Helpers.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Mvc.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Optimization.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.Razor.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.Deployment.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\System.Web.WebPages.Razor.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Antlr3.Runtime.pdb
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Newtonsoft.Json.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\EntityFramework.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\EntityFramework.SqlServer.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\obj\Debug\CompassionFinal.dll
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\obj\Debug\CompassionFinal.pdb
+C:\Users\paris1\Documents\Visual Studio 2015\Projects\CompassionFinal\CompassionFinal\obj\Debug\CompassionFinal.csprojResolveAssemblyReference.cache

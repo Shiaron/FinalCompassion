@@ -1,0 +1,51 @@
+﻿@model CompassionFinal.miembros_hogar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DETALLES</h2>
+
+<div>
+    <h4>MIEMBRO DE HOGAR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuidador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuidador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hogar.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hogar.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rol.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rol.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Idmiembro }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

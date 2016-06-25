@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CompassionFinal.INCIDENTE_MEDICO>
+
+@{
+    ViewBag.Title = "BUSCAR|INCIDENTE";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>INCIDENTES MEDICOS</h3>
+
+
+@using (Html.BeginForm("SearchIndex", "INCIDENTE_MEDICO", FormMethod.Get))
+{
+    <p>
+        Código del Niño : @Html.TextBox("SearchString")
+        <input type="submit" class="btn btn-info" value="Buscar" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            FECHA
+        </th>
+        <th>
+            COD.NIÑO
+        </th>
+        <th>
+            NOMBRES
+        </th>
+        <th>
+            T.INCIDENTE
+        </th>
+        <th>
+            MONTO DESEMBOLSADO
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Niño.Idniño)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Niño.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo1.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.monto_desembolsado)
+        </td>
+        <td>
+            <a class="btn btn-info" href="~/INCIDENTE_MEDICO/Edit/@item.IDincidente"> <i class="glyphicon glyphicon-wrench"></i></a>
+            || <a class="btn btn-info" href="~/INCIDENTE_MEDICO/Delete/@item.IDincidente"> <i class="glyphicon glyphicon-trash"></i></a>
+
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CompassionFinal.Hogar>
+
+@{
+    ViewBag.Title = "Buscar | Familia";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm("SearchIndex", "Hogar", FormMethod.Get))
+{
+    <p>
+        Familia : @Html.TextBox("SearchString")
+        <input type="submit" class="btn btn-info" value="Buscar" />
+    </p>
+}
+
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre)
+            </td>
+            <td>
+                <a class="btn btn-info" href="/Hogar/Edit/@item.Idhogar"> <i class="glyphicon glyphicon-wrench"></i></a>
+
+            </td>
+        </tr>
+    }
+
+</table>
+

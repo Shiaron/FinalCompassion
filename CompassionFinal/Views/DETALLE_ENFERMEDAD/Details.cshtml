@@ -1,0 +1,51 @@
+﻿@model CompassionFinal.DETALLE_ENFERMEDAD
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DETALLE_ENFERMEDAD</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CATEGORIA_ENFERMEDAD.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATEGORIA_ENFERMEDAD.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INCIDENTE_MEDICO.idniño)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INCIDENTE_MEDICO.idniño)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SUBCATEGORIA_ENFERMEDAD.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SUBCATEGORIA_ENFERMEDAD.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDdetalleEnf }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

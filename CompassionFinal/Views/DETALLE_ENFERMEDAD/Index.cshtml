@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CompassionFinal.DETALLE_ENFERMEDAD>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CATEGORIA_ENFERMEDAD.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.INCIDENTE_MEDICO.idniño)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBCATEGORIA_ENFERMEDAD.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CATEGORIA_ENFERMEDAD.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.INCIDENTE_MEDICO.idniño)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBCATEGORIA_ENFERMEDAD.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDdetalleEnf }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDdetalleEnf }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDdetalleEnf })
+        </td>
+    </tr>
+}
+
+</table>

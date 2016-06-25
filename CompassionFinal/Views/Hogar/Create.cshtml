@@ -1,0 +1,73 @@
+﻿@model CompassionFinal.Hogar
+
+@{
+    ViewBag.Title = "Create | Hogar";
+    List<CompassionFinal.Hogar> hogares = ViewBag.Hogar;
+}
+
+<h2>Registro de Familia</h2>
+<br />
+<h4> Si el niño tiene un hermano registrado en el programa, OMITIR este formulario</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.nombre, "Familia", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-info" />
+                <a class="btn btn-info" href="/Niño/Create">Omitir</a>
+            </div>
+
+        </div>
+    </div>
+}
+
+<br /><div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Lista de Familias</h4>
+            </div>
+            <div class="modal-body">
+
+                <table class="table-hover" align="center">
+
+                    <tbody>
+                        @foreach (var h in hogares)
+                    {
+                        <tr>
+                            <th>@Html.DisplayFor(modelItem => h.nombre)</th>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+<button type="button" class="btn btn-info " data-toggle="modal" data-target="#myModal"> Lista de Familias </button>
+<br />
+<br />
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,59 @@
+﻿@model CompassionFinal.TIPO_INMUNIZACION
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Nueva inmunizacion</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+       
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                Nombre :
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+               Nro.Dosis
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.nro_dosis, new { htmlAttributes = new { @class = "form-control" } }) 
+                @Html.ValidationMessageFor(model => model.nro_dosis, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                Periodo(meses)
+            </div>
+           
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.periodo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.periodo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-info" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Regresar", "Index")
+</div>

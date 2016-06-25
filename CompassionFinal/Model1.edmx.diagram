@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="13d63dd1abc7441884853ca34bd4655a" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ASISTENCIA" Width="1.5" PointX="8.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetRoles" Width="1.5" PointX="11.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserClaims" Width="1.5" PointX="16.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUserLogins" Width="1.5" PointX="16.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.AspNetUsers" Width="1.5" PointX="14" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.CATEGORIA_ENFERMEDAD" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DETALLE_ENFERMEDAD" Width="1.5" PointX="10.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DETALLE_HORARIO" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DETALLE_INMUNIZACIONES" Width="1.5" PointX="11.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DETALLE_LESION" Width="1.5" PointX="13.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DIAS" Width="1.5" PointX="3.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.DOSIS" Width="1.5" PointX="9" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ESTADO" Width="1.5" PointX="1.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.genero" Width="1.5" PointX="3.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GRADO_INSTRUCCION" Width="1.5" PointX="1.5" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.GRUPO_CLASE" Width="1.5" PointX="3.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Hogar" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.INCIDENTE_MEDICO" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.LESION" Width="1.5" PointX="11.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.miembros_hogar" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Niño" Width="1.5" PointX="6" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Nivel" Width="1.5" PointX="3.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PERIODO" Width="1.5" PointX="1.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Rol" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.SUBCATEGORIA_ENFERMEDAD" Width="1.5" PointX="8.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Tipo" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TIPO_INMUNIZACION" Width="1.5" PointX="9" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TUTOR" Width="1.5" PointX="1.5" PointY="14.625" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_ASISTENCIA_NIÑO" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DETALLE_ENFERMEDAD_CATEGORIA" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_SUBCATEGORIA_ENFERMEDAD" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DETALLE_ENFERMEDAD_INCIDENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DETALLE_ENFERMEDAD_SUBCATEGORIA" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_det_horario" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DET_HORARIO_D" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DOSIS_INMUNIZACIONES" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_inmunizacion_niño" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TIPO_INMUNIZACION" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DETALLE_LESION_INCIDENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_DETALLE_LESION_LESION" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TUTOR_ESTADO" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_NIÑO_GENERO" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_TUTOR_grado" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dGRUPO_CLASE_P" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_dGRUPO_CLASE_T" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_NIÑO_GRUPO" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_HOGAR_MIEMBROS_HOGAR" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_NIÑO_HOGAR" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_INCIDENTE_MEDICO_NIÑO" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_INCIDENTE_MEDICO_TIPO" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_MIEMBROS_HOGAR_ROL" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_NIÑO_NIVEL" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,51 @@
+﻿@model CompassionFinal.GRUPO_CLASE
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GRUPO DE CLASE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AÑO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AÑO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PERIODO1.NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PERIODO1.NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TUTOR1.nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TUTOR1.nombres)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDgrupo }) |
+    @Html.ActionLink("Regresar", "SearchIndex")
+</p>

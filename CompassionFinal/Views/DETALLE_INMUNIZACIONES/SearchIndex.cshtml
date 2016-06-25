@@ -1,0 +1,67 @@
+﻿@model IEnumerable<CompassionFinal.DETALLE_INMUNIZACIONES>
+
+@{
+    ViewBag.Title = "BUSCAR|INMUNIZACIONES";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Control de Inmunizaciones</h2>
+<br />
+
+@using (Html.BeginForm("SearchIndex", "DETALLE_INMUNIZACIONES", FormMethod.Get))
+{
+    <p>
+        CODIGO DEL NIÑO : @Html.TextBox("SearchString")
+        <input type="submit" class="btn btn-info" value="Buscar" />
+    </p>
+}
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            FECHA         
+        </th>
+        <th>
+            COD.NIÑO
+        </th>
+        <th>
+            NOMBRES
+        </th>
+        <th>
+            INMUNIZACION
+        </th>
+        <th>
+            N°DOSIS
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Niño.Idniño)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Niño.Nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TIPO_INMUNIZACION1.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOSIS1.nombre)
+        </td>
+
+        <td>
+            <a class="btn btn-info" href="/DETALLE_INMUNIZACIONES/Edit/@item.IDInmunizacion"> <i class="glyphicon glyphicon-wrench"></i></a>
+            
+
+
+        </td>
+    </tr>
+}
+
+</table>
